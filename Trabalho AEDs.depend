@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1719841924 source:c:\users\arineia reis\onedrive\Área de trabalho\trabalho aeds\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<assert.h>
+
