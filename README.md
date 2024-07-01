@@ -1,137 +1,109 @@
-# Trabalho-AEDs-e-Fundamentos
+# **Pontifícia Univerdade Católica de Minas Gerais**
 
-PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS
+**Instituto de Ciências Exatas e Informática**
 
-INSTITUTO DE CIÊNCIAS EXATAS E INFORMÁTICA
+**Unidade Educacional Coração Eucarístico**
 
-UNIDADE EDUCACIONAL CORAÇÃO EUCARÍSTICO
+## Gabriel Reis e Miguel Mello
 
-Nome dos integrantes do grupo:
+## Sistema do Hotel Descanso garantido 
 
-Gabriel Reis
+**Introdução**
+<div>
+   Esse projeto e sobre o Hotel Descanso Garantido, no qual o usuário vai cadastrar os seus clientes, quartos, funcionários e estadia, dentro do seu computador, substituindo a forma antiga que era anotado em um papel.
 
-Docente: 
+##   
+   <img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_174656782.png?raw=true"/>
 
-Prof. Michelle Hanne e Prof. Carlos Ribas
+    
+   Figura 1: Criando Quadros e decidindo cada tópico pelo <a href="https://trello.com/invite/b/x2oRG6ZX/ATTI2b418028945054326b0de565c12f3edbF0B2C525/meu-quadro-do-trello">Trello</a>, onde decidi organizar as nossas ideias e coloca-las no Trello para que assim fique melhor a visualização de cada passo a passo que eu vou fazer.
+##
+   <img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_174235558.png?raw=true"/>
+    
+   Figura 2: Definir o que fazer em cada Sprint
+   Na figura 2, definimos o dia e todas as funções e metas que iremos produzir a cada sprint, priorizando a qualidade e o desenvolvimento do código, para que assim, temos uma organização e visualização de cada passo a passo que vamos fazer e confirmar os objetivos que fizemos.
+## 
+   
+   <img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_175151845.png?raw=true"/>
+    
+   Figura 3: Mostrar o que eu já concluo
+   Na figura 3, coloquei todos os processos que eu concluo no card “CONCLUIDO”, enxergando a velocidade do meu progresso.
+</div>
 
-Nome do sistema:
-
-Hotel Descanso Garantido 
-
-Apresentação:
-
-Esse projeto e sobre o Hotel Descanso Garantido, no qual o usuário vai cadastrar os seus clientes, quartos, funcionários e estadia, dentro do seu computador, substituindo a forma antiga que era anotado em um papel.
-
-<img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_174656782.png?raw=true"/>
- 
-Figura 1: Criando Quadros e decidindo cada tópico pelo Trello "(https://trello.com/invite/b/x2oRG6ZX/ATTI2b418028945054326b0de565c12f3edbF0B2C525/meu-quadro-do-trello)"
-Decidi organizar as minhas ideias e coloca-las no Trello para que assim fique melhor a visualização de cada passo a passo que eu vou fazer.
-
-<img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_174235558.png?raw=true"/>
- 
-Figura 2: Definir o que fazer em cada Sprint
-Na figura 2, defini o dia e todas as funções e metas que irei produzir a cada sprint, priorizando a qualidade e o desenvolvimento do código, para que assim, eu tenha uma organização e visualização de cada passo a passo que eu deva fazer e confirmar os objetivos que eu fiz. 
-
-<img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-06-30_175151845.png?raw=true"/>
- 
-Figura 3: Mostrar o que eu já concluo
-Na figura 3, coloquei todos os processos que eu concluo no card “CONCLUIDO”, enxergando a velocidade do meu progresso.
-
-Explicação da Estrutura de Dados Principal
+<!--Funções-->
+<div>
+<h1>Explicação da Estrutura de Dados Principal</h1>
 O programa utiliza várias estruturas de dados para gerenciar um sistema de hotel. Cada estrutura representa uma entidade principal no sistema, como clientes, funcionários, quartos e estadias. Aqui estão as principais estruturas de dados:
 
-Cliente: Representa um cliente do hotel.
-typedef struct {
-    int id;
-    char nome[50];
-    char endereco[100];
-    char telefone[15];
-} Cliente;
 
-Esta estrutura armazena o ID, nome, endereço e telefone de um cliente.
+testeAdicionarCliente: Adiciona um cliente de teste ao array de clientes e salva os clientes em um arquivo.
 
-Funcionario: Representa um funcionário do hotel, com um campo adicional para o salário.
-typedef struct {
-    int id;
-    char nome[50];
-    char endereco[100];
-    char telefone[15];
-    double salario;
-} Funcionario;
-Esta estrutura armazena o ID, nome, endereço, telefone e salário de um funcionário.
+testeBuscarCliente: Busca um cliente de teste pelo ID e verifica se os dados estão corretos.
 
-Quarto: Representa um quarto no hotel, com capacidade, diária e status (disponível ou ocupado).
-typedef struct {
-    int numero;
-    int capacidade;
-    double diaria;
-    char status;
-} Quarto;
-Esta estrutura armazena o número, capacidade, diária e status de um quarto. O status pode ser “Disponível” ou “Ocupado”.
+testeAdicionarFuncionario: Adiciona um funcionário de teste ao array de funcionários e salva os funcionários em um arquivo.
 
-Data: Representa uma data com dia, mês e ano.
-typedef struct {
-    int dia;
-    int mes;
-    int ano;
-} Data;
-Esta estrutura armazena uma data, com dia, mês e ano.
+testeBuscarFuncionario: Busca um funcionário de teste pelo ID e verifica se os dados estão corretos.
 
-Estadia: Representa uma estadia no hotel, associando um cliente a um quarto durante um período específico.
-typedef struct {
-    int id;
-    Data entrada;
-    Data saida;
-    Cliente cliente;
-    Quarto quarto;
-} Estadia;
-Esta estrutura armazena uma estadia, com um ID, data de entrada, data de saída, informações do cliente e informações do quarto.
+testeAdicionarQuarto: Adiciona um quarto de teste ao array de quartos e salva os quartos em um arquivo.
 
+testeBuscarQuarto: Busca um quarto de teste pelo número e verifica se os dados estão corretos.
 
-Arrays e Contadores: Arrays para armazenar múltiplos clientes, funcionários, quartos e estadias. Variáveis para contar o total de cada usuario.
-Cliente clientes[100];
-Funcionario funcionarios[100];
-Estadia estadias[100];
-Quarto quartos[100];
-int totalClientes = 0, totalFuncionarios = 0, totalEstadias = 0, totalQuartos = 0;
+testeAdicionarEstadia: Adiciona uma estadia de teste ao array de estadias e salva as estadias em um arquivo.
 
-Apresentação das Assinaturas das Funções:
-dataParaTm (Converte uma estrutura Data para uma estrutura tm do C.)
-void dataParaTm(Data d, struct tm *tm);
-calcularDiferencaDias (Calcula a diferença em dias entre duas datas.):
-int calcularDiferencaDias(Data inicio, Data fim);
+testeCalcularDiarias: Calcula o total a pagar pela estadia de teste com base na diferença entre a data de entrada e saída.
 
-calcularDiarias (Calcula o total a pagar por uma estadia, baseada no número de dias e na diária do quarto):
-float calcularDiarias();
+executarTestes: Executa todas as funções de teste.
 
-encerrarEstadia (Encerra uma estadia, mudando o status do quarto para “Disponivel”)
-void encerrarEstadia();
+salvarClientes: Salva os dados dos clientes em um arquivo.
 
-buscarCliente (Busca e exibe informações de um cliente pelo seu ID)
-void buscarCliente();
+salvarFuncionarios: Salva os dados dos funcionários em um arquivo.
 
-buscarFuncionario (Busca e exibe informações de um funcionário pelo seu ID)
-void buscarFuncionario();
+salvarQuartos: Salva os dados dos quartos em um arquivo.
 
-adicionarQuarto(Adiciona um novo quarto ao sistema)
-void adicionarQuarto();
+salvarEstadias: Salva os dados das estadias em um arquivo.
 
-adicionarEstadia (Adiciona uma nova estadia ao sistema, associando um cliente e um quarto)
-void adicionarEstadia();
+definirStatusQuarto: Define o status de um quarto baseado no número do quarto.
 
-adicionarFuncionario (adiciona um novo funcionário no sistema)
-void adicionarFuncionario();
+lerClientes: Lê os dados dos clientes de um arquivo e os armazena no array de clientes.
 
-adicionarCliente (Adiciona um novo cliente ao sistema)
-void adicionarCliente();
+lerFuncionarios: Lê os dados dos funcionários de um arquivo e os armazena no array de funcionários.
 
-buscarQuarto (Busca e exibe informações de um quarto pelo seu número)
-void buscarQuarto();
+lerQuartos: Lê os dados dos quartos de um arquivo e os armazena no array de quartos.
 
+lerEstadias: Lê os dados das estadias de um arquivo e os armazena no array de estadias.
 
-Testes:
+calcularDiarias: Calcula o total a pagar pela estadia com base na diferença entre a data de entrada e saída.
 
-Teste 1 (Cadastrar cliente): 
+encerrarEstadia: Encerra uma estadia com base no ID, altera o status do quarto para 'L' (livre) e salva as alterações.
+
+buscarCliente: Busca um cliente pelo ID e exibe seus dados.
+
+buscarFuncionario: Busca um funcionário pelo ID e exibe seus dados.
+
+buscarQuarto: Busca um quarto pelo número e exibe seus dados.
+
+verificarIDCliente: Verifica se o ID do cliente já existe.
+
+verificarIDFuncionario: Verifica se o ID do funcionário já existe.
+
+verificarNumeroQuarto: Verifica se o número do quarto já existe.
+
+verificarIDEstadia: Verifica se o ID da estadia já existe.
+
+listarClientes: Lista todos os clientes.
+
+listarFuncionarios: Lista todos os funcionários.
+
+listarQuartos: Lista todos os quartos.
+
+listarEstadias: Lista todas as estadias.
+</div>
+<!--Testes-->
+<div>
+<hr>
+<h1>Testes</h1>
+
+<h3>Teste 1 (Cadastrar cliente): </h3>
 
 Entrada de dados: 
 
@@ -144,19 +116,18 @@ Saída de dados esperada:
 Resultado: Funcionando corretamente!
 
 
-Teste 2- (Cadastro de um código de cliente repetido) quando o usuário for cadastrar um cliente, e colocar um código/ID que já existe(já foi cadastrado).
+<h3>Teste 2- (Cadastro de um código de cliente repetido) quando o usuário for cadastrar um cliente, e colocar um código/ID que já existe(já foi cadastrado).  </h3>
 
 Entrada de dados:
 
- 1.
- Saída de dados:
+Saída de dados:
 
 Este ID já existe! 
 
 Resultado: Funcionando corretamente!
 
 
-Teste 3 (Cadastrar funcionário)
+<h3>Teste 3 (Cadastrar funcionário)  </h3>
 
  Entrada de dados: 
  
@@ -169,11 +140,10 @@ Funcionário cadastrado com sucesso!
 Resultado: Funcionando corretamente!
 
 
-Teste 4- (Cadastro de um ID de funcionário repetido): Ao cadastrar funcionário, colocar um ID que já tenha sido cadastrado.
+<h3>Teste 4- (Cadastro de um ID de funcionário repetido): Ao cadastrar funcionário, colocar um ID que já tenha sido cadastrado.  </h3>
 
- Entrada de dados: 
+Entrada de dados: 
  
-1. 
 Saída de dados:
 
 Esse ID já existe! 
@@ -181,7 +151,7 @@ Esse ID já existe!
 Resultado: Funcionando corretamente!
 
 
-Teste 5 (Cadastro de quarto):
+<h3>Teste 5 (Cadastro de quarto):  </h3>
 
  Entrada de dados:
  
@@ -193,12 +163,9 @@ Quarto cadastrado!.
 
 Resultado: Funcionando corretamente!
 
-
-Teste 6: (Cadastro de um código de quarto repetido):quando o usuário for cadastrar um novo quarto usando um ID já existente. 
+<h3>Teste 6: (Cadastro de um código de quarto repetido):quando o usuário for cadastrar um novo quarto usando um ID já existente.  </h3>
 
 Entrada de dados: 
-
-1.
 
 Saída de dados: 
 
@@ -207,7 +174,7 @@ O ID desse quarto já existe!
 Resultado: Funcionando corretamente!
 
 
-Teste 7: (Cadastrar uma estadia): 
+<h3>Teste 7: (Cadastrar uma estadia):  </h3>
 
 Entrada de dados: 
 
@@ -220,7 +187,7 @@ Estadia cadastrada com sucesso!.
 Resultado: Funcionando corretamente!
 
 
-Teste 8: Cadastrar estadia sem existir o quarto: 
+<h3>Teste 8: Cadastrar estadia sem existir o quarto: </h3>
 
 Entrada de dados: 
 
@@ -233,7 +200,7 @@ Esse quarto não está cadastrado!.
 Resuldado: Funcionando corretamente!
 
 
-Teste 9: Ver se ao digitar um ID que não foi cadastrado, deve apresentar uma mensagem de que esse id não existe
+<h3>Teste 9: Ver se ao digitar um ID que não foi cadastrado, deve apresentar uma mensagem de que esse id não existe </h3>
 
 Entrada de dados:
 
@@ -245,7 +212,7 @@ Esse ID não existe!.
 Resultado: Funcionando corretamente!
 
 
-Teste 10: Calcular a diária sem existir o ID da estadia.
+<h3>Teste 10: Calcular a diária sem existir o ID da estadia. </h3>
 
 Entrada de dados:
 
@@ -257,9 +224,11 @@ Estadia não encontrada!.
 
 Resultado: Funcionando corretamente!
 
-
-Para fazer os testes automatizados eu utilizei a biblioteca <assert.h> no próprio code blox, facilitando se cada função está funcionando.
+<hr>
+Para fazer os testes automatizados nos utilizamos a biblioteca <assert.h> no próprio <a href = "https://www.codeblocks.org/">Code::Blocks</a> facilitando se cada função está funcionando.
 
  <img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-07-01_110310213.png?raw=true"/>
 
  <img src="https://github.com/ReisBiel23/Trabalho-AEDs-e-Fundamentos/blob/main/imagem_2024-07-01_110736525.png?raw=true"/>
+
+</div>
